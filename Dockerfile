@@ -1,18 +1,14 @@
 FROM alpine
 
+ENV PATH="/root/.yarn/bin:${PATH}"
+
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
-RUN apk --update add nodejs curl bash gnupg
-
-RUN touch $HOME/.profile
-
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
-
-RUN mkdir -p /app
+RUN apk --update add nodejs curl gnupg && \
+    curl -o- -L https://yarnpkg.com/install.sh | bash && \
+    mkdir -p /app
 
 WORKDIR "/app"
 VOLUME ["/app"]
-
-RUN export PATH="$HOME/.yarn/bin:$PATH"
 
 CMD ["yarn"]
