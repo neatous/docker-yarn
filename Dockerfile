@@ -4,11 +4,11 @@ MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 RUN apk --update add nodejs curl bash gnupg
 
-touch $HOME/.profile
+RUN touch $HOME/.profile
 
-curl -o- -L https://yarnpkg.com/install.sh | bash
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-mkdir -p /app
+RUN mkdir -p /app
 
 WORKDIR "/app"
 VOLUME ["/app"]
