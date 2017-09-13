@@ -4,7 +4,7 @@ ENV PATH="/root/.yarn/bin:${PATH}"
 
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
-RUN apk --update add nodejs curl gnupg && \
+RUN apk --update add bash curl gnupg nodejs && \
     curl -o- -L https://yarnpkg.com/install.sh | bash && \
     mkdir -p /app
 
