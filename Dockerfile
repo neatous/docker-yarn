@@ -13,4 +13,6 @@ RUN mkdir -p /app
 WORKDIR "/app"
 VOLUME ["/app"]
 
-CMD ["/root/.yarn/bin/yarn"]
+RUN export PATH="$HOME/.yarn/bin:$PATH"
+
+CMD ["yarn"]
