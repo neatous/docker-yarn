@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 ENV PATH="/root/.yarn/bin:${PATH}"
