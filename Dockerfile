@@ -1,10 +1,15 @@
-FROM alpine:edge
+FROM debian:stretch
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 ENV PATH="/root/.yarn/bin:${PATH}"
 
-RUN apk --update add bash curl git gnupg nodejs && \
-    curl -o- -L https://yarnpkg.com/install.sh | bash && \
+RUN apt-get -y update && \
+    apt-get -y install bash curl git gpg zlib1g-dev
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -  && \
+    apt-get install -y nodejs
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s && \
     mkdir -p /app
 
 WORKDIR "/app"
