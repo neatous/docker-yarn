@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 ENV PATH="/root/.yarn/bin:${PATH}"
