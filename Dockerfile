@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 ENV PATH="/root/.yarn/bin:${PATH}"
