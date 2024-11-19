@@ -1,11 +1,11 @@
 FROM debian:bookworm
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
-ENV NODE_MAJOR=20
+ENV NODE_MAJOR=22
 ENV PATH="/root/.yarn/bin:${PATH}"
 
 RUN apt-get -y update && \
-    apt-get -y install bash ca-certificates curl git gnupg gpg zlib1g-dev
+    apt-get -y install bash build-essential ca-certificates curl git gnupg gpg zlib1g-dev
 
 RUN mkdir -p /etc/apt/keyrings && \
     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
