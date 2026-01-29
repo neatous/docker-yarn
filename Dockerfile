@@ -1,7 +1,7 @@
 FROM debian:trixie
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
-ENV NODE_MAJOR=22
+ENV NODE_MAJOR=24
 ENV PATH="/root/.yarn/bin:${PATH}"
 
 RUN apt-get -y update && \
