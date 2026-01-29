@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:trixie
 MAINTAINER Martin Venuš "martin.venus@gmail.com"
 
 ENV NODE_MAJOR=22
